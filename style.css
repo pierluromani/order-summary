@@ -1,0 +1,154 @@
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 16px; 
+   font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+   overflow: hidden;
+   background-color: #E0E8FF;
+   margin: 0;
+}
+
+.order-summary {
+   height: 100vh;
+   width: 100vw;
+   background: url('./images/pattern-background-desktop.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.card {
+   background: #fff;
+   height: 75vh;
+   width: 30vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 20px;
+   box-shadow: 0px 10px 5px -10px #c7ccf8, 0px 30px 40px -25px #bdc4ff;
+   text-align: center;
+}
+
+.card__img {
+   top: 0;
+   margin-bottom: 1rem;
+   overflow: hidden;
+   width: 100%;
+}
+.card__img img {
+   border-radius: 20px 20px 0 0;
+   overflow: hidden;
+   width: 100%;
+}
+.card__title {
+   font-size: 2rem;
+   font-weight: 700;
+}
+.card__text {
+   padding: 0 3rem;
+   color: #a7a7a7;
+}
+.card__plan-container {
+   background-color: #F8F9FE;
+   height: 100px;
+   width: 80%;
+   border-radius: 15px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.card__plan {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.card__plan-info {
+   line-height: 1.8rem;
+   flex-grow: 2;
+   text-align: start; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-self: stretch;
+}
+.card__plan-info__title {
+   font-weight: 900;
+}
+
+.card__plan-icon {
+   flex-grow: 1;
+}
+.card__plan-btn {
+   flex-grow: 1;
+   font-weight: 700;
+   color: #A5A0D3;
+   transition: color 0.5s ease;
+}
+
+.card__plan-btn a{
+   transition: color 0.2s ease;
+   text-decoration: none;
+}
+.card__plan-btn a:hover {
+   color: #746CEA;
+}
+
+button.submit {
+   font-family: 'Red Hat Display', sans-serif;
+   background-color: #382AE1;
+   color: white;
+   font-weight: 700;
+   font-size: 1rem;
+   width: 80%;
+   height: 50px;
+   border-radius: 15px;
+   border: none;
+   cursor: pointer;
+   box-shadow: 0px 15px 20px -5px #c9c0fa;
+   transition: background 0.2s ease;
+}
+button.submit:hover{
+   background-color: #746CEA;
+}
+
+a.cancel {   
+   margin-bottom: 2rem;
+   font-weight: 700;
+   font-size: 1rem;
+   color: #757885;
+   cursor: pointer;
+   transition: color 0.2s ease;
+}
+a.cancel:hover{
+   color: #000;
+}
+
+@media (max-width: 1116px) {
+   html {
+      font-size: 14px;
+   }
+}
+
+@media (max-width: 768px) {
+   html {
+      font-size: 14px;
+   }
+   .order-summary {
+      background: url('./images/pattern-background-mobile.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+   .card {
+      height: 85vh;
+      width: 85vw;
+   }
+}
